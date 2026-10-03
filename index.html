@@ -103,7 +103,7 @@ nav .btn{padding:10px 18px;font-size:14px}
 /* ---------- hero ---------- */
 .hero{min-height:100svh;display:flex;align-items:center;padding:104px 0 72px;overflow:hidden;background:radial-gradient(80% 70% at 72% 45%,#262524 0%,var(--bg) 62%)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;width:100%}
-.hero h1{font-size:clamp(50px,6vw,92px);margin:16px 0 20px}
+.hero h1{font-size:clamp(50px,6vw,92px);margin:0 0 20px}
 .hero p.lead{font-size:clamp(17px,1.4vw,19px)}
 .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.04em}
 .hero h1 .w > span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease)}
@@ -404,7 +404,6 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
 <section class="hero" id="s-hero" data-rail="Signal" data-law="Serial Position Effect|The strongest claim and proof go first, because people remember the start and end of a page best.">
   <div class="wrap">
     <div>
-      <div class="mono status"><b></b>Applying to Temple · Engineering / Product / Design</div>
       <h1 id="heroTitle"><span class="w"><span>I design it.</span></span><br><span class="w"><span>I build it.</span></span><br><span class="w"><span><em>I figure out</em></span></span><br><span class="w"><span><em>the rest.</em></span></span></h1>
       <p class="lead">I'm Shreyash Khare, a final-year CSE (AI &amp; Robotics) student at VIT Chennai. I started in UI/UX and kept getting pulled into the build: frontends, serverless backends, ML models, and now sensors and microcontrollers. Temple asked for people who can <span class="brass">figure it out</span>. That's how I already work.</p>
       <div class="ctas">
@@ -558,7 +557,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
 <!-- 05 RIPPLE -->
 <section id="s-ripple" data-rail="Backend" data-law="Tesler's Law|Complexity has to live somewhere. I put it in the system (retries, DLQs, idempotency) so users never see it.">
   <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">04</span><span class="rule"></span>Ripple · serverless AI platform</div>
+    <div class="eyebrow mono rv"><span class="idx">04</span><span class="rule"></span>Ripple · my MVP · serverless AI platform</div>
     <h2 class="rv">Backends that<br>expect to fail.</h2>
     <p class="lead rv" style="margin-top:24px">Ripple runs AI interview workflows: resume evaluation, transcript analysis and mock interviews. Below is roughly how it moves work. Every so often a job fails on purpose; watch it go to the dead-letter queue and come back without being processed twice.</p>
     <div class="arch rv">
@@ -591,6 +590,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
       <div class="rv d1"><h6>Agentic scoring</h6><p>Specialised LLM agents score against configurable rubrics, and results are kept for analytics over time.</p></div>
       <div class="rv d2"><h6>Private RAG</h6><p>pgvector semantic search over user uploads, with per-user isolation through JWT/OAuth.</p></div>
     </div>
+    <div class="rv" style="margin-top:32px"><a class="btn btn-ghost" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener">Try the Ripple MVP live →</a></div>
   </div>
 </section>
 
@@ -664,8 +664,8 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
     <div class="eyebrow mono rv"><span class="idx">08</span><span class="rule"></span>Also shipped</div>
     <h2 class="rv">More things,<br>live on the internet.</h2>
     <div class="work">
-      <a class="wcard rv" href="https://www.aethertech.space/" target="_blank" rel="noopener"><div><span class="mono">AI precision farming</span><h4>Aether</h4><p>Four ML pipelines (soil moisture, crop disease, crop recommendations, market prices) turned into one decision a farmer can act on in seconds. Frontend built end to end against a real backend.</p></div><div class="go"><span>aethertech.space</span><b>→</b></div></a>
-      <a class="wcard rv d1" href="https://aletheia-front.vercel.app/" target="_blank" rel="noopener"><div><span class="mono">AI misinformation detection</span><h4>Aletheia</h4><p>Bias and manipulation-technique tags turned into a real-time credibility score a non-technical reader can trust. React, Vite, TypeScript.</p></div><div class="go"><span>Live demo</span><b>→</b></div></a>
+      <a class="wcard rv" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener"><div><span class="mono"><span class="brass">MVP</span> · Serverless AI platform</span><h4>Ripple</h4><p>AI interview prep: resume evaluation, transcript analysis and mock interviews. LLM agents score against configurable rubrics, on AWS Lambda + SQS with idempotent workers, DLQs and a pgvector RAG pipeline. The architecture is shown above.</p></div><div class="go"><span>Live demo</span><b>→</b></div></a>
+      <a class="wcard rv d1" href="https://www.aethertech.space/" target="_blank" rel="noopener"><div><span class="mono">AI precision farming</span><h4>Aether</h4><p>Four ML pipelines (soil moisture, crop disease, crop recommendations, market prices) turned into one decision a farmer can act on in seconds. Frontend built end to end against a real backend.</p></div><div class="go"><span>aethertech.space</span><b>→</b></div></a>
       <a class="wcard rv" href="https://github.com/shreyash-droid/webScrapingForJobs" target="_blank" rel="noopener"><div><span class="mono">Automated data pipeline</span><h4>CareerBot</h4><p>Scoped and shipped solo. A Python pipeline that scrapes 6 job boards, dedupes and ranks the listings, and sends the top 10 matches to Telegram. It runs 24/7 and replaced a manual tracker. Python, Telegram API, Google Sheets.</p></div><div class="go"><span>GitHub</span><b>→</b></div></a>
       <a class="wcard rv d1" href="https://campuspreps.vercel.app/" target="_blank" rel="noopener"><div><span class="mono">Multi-university platform</span><h4>CampusPreps</h4><p>Sole designer and developer. 20+ white-label components any university can deploy, Next.js 15 + Prisma, with the whole stack running from one <code style="font-family:var(--mono);font-size:13px">docker compose up</code>.</p></div><div class="go"><span>Live site</span><b>→</b></div></a>
     </div>
