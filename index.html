@@ -171,6 +171,13 @@ nav .btn{padding:10px 18px;font-size:14px}
 .pipe{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:22px}
 .pipe span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:8px;background:#232220;border:1px solid var(--line-2)}
 .pipe i{font-style:normal;color:var(--brass)}
+.hook{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:36px;font-size:16px;color:#d9d4cb}
+.hook a{display:inline-flex;align-items:center;gap:8px;color:var(--brass);font-weight:500;border-bottom:1px solid rgba(212,178,90,.4);padding:6px 0;transition:border-color .2s,gap .2s}
+.hook a:hover{border-color:var(--brass);gap:12px}
+.stone .hook{color:#2b2926}
+.stone .hook a{color:#5a4410;border-color:rgba(90,68,16,.4)}
+.stack{margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.stack b{color:var(--brass);font-weight:500;margin-right:8px}
 .honest{margin-top:28px;display:flex;gap:16px;align-items:flex-start;padding:20px 24px;border-radius:16px;border:1px dashed var(--line-2);color:#cfcac1;font-size:15px}
 .honest b{font-weight:500;color:var(--cream)}
 .leg-wrap{display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:end;margin-top:22px;background:#141413;border:1px solid var(--line);border-radius:14px;padding:12px}
@@ -405,7 +412,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   <div class="wrap">
     <div>
       <h1 id="heroTitle"><span class="w"><span>I design it.</span></span><br><span class="w"><span>I build it.</span></span><br><span class="w"><span><em>I figure out</em></span></span><br><span class="w"><span><em>the rest.</em></span></span></h1>
-      <p class="lead">I'm Shreyash Khare, a final-year CSE (AI &amp; Robotics) student at VIT Chennai. I started in UI/UX and kept getting pulled into the build: frontends, serverless backends, ML models, and now sensors and microcontrollers. Temple asked for people who can <span class="brass">figure it out</span>. That's how I already work.</p>
+      <p class="lead">I'm Shreyash Khare, a final-year CSE (AI &amp; Robotics) student at VIT Chennai. I started in UI/UX and kept getting pulled into the build: web apps, cloud backends, ML models, and now sensors and microcontrollers. Temple asked for people who can <span class="brass">figure it out</span>. That's how I already work.</p>
       <div class="ctas">
         <a class="btn btn-brass" href="mailto:shreyashkhare.work@gmail.com?subject=Temple%20%E2%80%94%20let%27s%20talk">Email me →</a>
         <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
@@ -450,8 +457,8 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
 <div class="wrap" id="s-stats" data-law="Miller's Law|Four numbers, not fifteen. Working memory holds about 7±2 chunks, so the proof is pre-chunked.">
   <div class="stats">
     <div class="stat rv"><div class="n"><span data-count="3">0</span><sup>×</sup></div><p>weekly visitors after my KeyNcoders redesign (1k → 3k)</p></div>
-    <div class="stat rv d1"><div class="n"><span data-count="4">0</span><sup>products</sup></div><p>in one CRM suite I designed, and built three web surfaces of</p></div>
-    <div class="stat rv d2"><div class="n"><span data-count="109">0</span><sup>k beats</sup></div><p>of real MIT-BIH ECG data behind my wearable-ECG models</p></div>
+    <div class="stat rv d1"><div class="n"><span data-count="4">0</span><sup>products</sup></div><p>in one CRM suite. I designed all four and built the web side.</p></div>
+    <div class="stat rv d2"><div class="n"><span data-count="109">0</span><sup>k beats</sup></div><p>real heartbeats (MIT-BIH dataset) used to train my wearable-ECG models</p></div>
     <div class="stat rv d3"><div class="n">+<span data-count="25">0</span><sup>%</sup></div><p>registrations for a 1,000+ person national hackathon</p></div>
   </div>
 </div>
@@ -474,16 +481,16 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
         <circle cx="448" cy="180" r="18" fill="none" stroke="#8A6B23" opacity=".5"><animate attributeName="r" values="18;40" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="2s" repeatCount="indefinite"/></circle>
       </svg>
       <div>
-        <p class="lead rv">A small team building a new device can't afford a handoff at every layer. I can take a problem from interview notes to Figma to a deployed API, and I'm learning the firmware end too.</p>
+        <p class="lead rv">A small team building a new device can't afford a handoff at every layer. I can take a problem from user interviews to Figma to a live API, and I'm learning the firmware end too.</p>
         <div class="lane-list" style="margin-top:28px">
-          <div class="lane rv"><span class="no">01</span><div><h4>Design</h4><p>Research, IA, design systems. UI/UX Lead at GDG VIT. A redesign that tripled traffic.</p></div></div>
-          <div class="lane rv d1"><span class="no">02</span><div><h4>Frontend</h4><p>React, Next.js, TypeScript. Shipped production dashboards, portals and landing pages.</p></div></div>
-          <div class="lane rv d2"><span class="no">03</span><div><h4>Backend</h4><p>AWS Lambda, SQS, PostgreSQL, Supabase, RAG. Built for retries and failure from the start.</p></div></div>
-          <div class="lane rv d3"><span class="no">04</span><div><h4>Hardware / ML</h4><p>ECG sensing on Arduino, an ESP32 humanoid leg, and models from Random Forests to spiking nets.</p></div></div>
+          <div class="lane rv"><span class="no">01</span><div><h4>Design</h4><p>User research, information architecture, design systems. UI/UX Lead at GDG VIT. A redesign that tripled traffic.</p></div></div>
+          <div class="lane rv d1"><span class="no">02</span><div><h4>Frontend</h4><p>React, Next.js, TypeScript. Dashboards, portals and landing pages that real users log into.</p></div></div>
+          <div class="lane rv d2"><span class="no">03</span><div><h4>Backend</h4><p>APIs, job queues and databases on AWS and Supabase, plus AI search. Built to keep working when parts fail.</p></div></div>
+          <div class="lane rv d3"><span class="no">04</span><div><h4>Hardware / ML</h4><p>An Arduino ECG wearable, a robotic leg on an ESP32, and ML models trained on real body signals.</p></div></div>
         </div>
       </div>
     </div>
-    <p class="callout rv">Most applicants will bring one lane. <u>I bring all four</u>, and I already know where the seams between them break.</p>
+    <p class="callout rv">Most applicants bring one lane. <u>I bring all four</u>, which means fewer handoffs and faster shipping for a small team.</p>
   </div>
 </section>
 
@@ -497,15 +504,15 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
       <article class="card rv">
         <span class="tag">Academic group project</span><span class="tag">Wearable</span>
         <h3>NeuroCardio — wearable ECG</h3>
-        <p>An Arduino prototype with an analog ECG sensor and an electrode belt. I replaced the synthetic data we inherited with the real MIT-BIH Arrhythmia Database, about 109k beats, and benchmarked three model families on it.</p>
+        <p>An Arduino prototype with an analog ECG sensor and an electrode belt. I replaced the fake data we inherited with about 109k real heartbeats from the MIT-BIH Arrhythmia Database, then compared three kinds of model to see which spots irregular beats best.</p>
         <canvas class="scope" id="ecg" aria-label="Animated ECG trace"></canvas>
-        <div class="scope-legend mono"><span>Lead · live trace</span><span id="ecgBpm">— bpm</span></div>
-        <div class="pipe"><span>Electrode belt</span><i>→</i><span>Analog front-end</span><i>→</i><span>Arduino</span><i>→</i><span>RF · 1D-CNN · SNN</span></div>
+        <div class="scope-legend mono"><span>ECG trace · demo signal</span><span id="ecgBpm">— bpm</span></div>
+        <div class="pipe"><span>Electrode belt</span><i>→</i><span>Analog front-end</span><i>→</i><span>Arduino</span><i>→</i><span>Random Forest · CNN · Spiking NN</span></div>
       </article>
       <article class="card rv d1">
         <span class="tag">Team project</span><span class="tag">Reinforcement learning</span>
         <h3>Bipedal locomotion, sim → real</h3>
-        <p>We're training a walking policy in NVIDIA Isaac Sim for a custom 6-DOF humanoid leg designed in CAD, with DC motors, an ESP32, motor drivers and an MPU6050 IMU. PPO maps joint angles, velocities and IMU orientation to motor torque, with domain randomisation and a manipulability reward term to narrow the sim-to-real gap.</p>
+        <p>We're teaching a robotic leg to walk with reinforcement learning. We designed the leg in CAD (6 joints, DC motors, an ESP32 controller and a motion sensor) and train it in NVIDIA Isaac Sim. The model reads joint angles and body tilt and decides how hard each motor pushes. We deliberately vary the simulation so what works in sim still works on real hardware.</p>
         <div class="leg-wrap">
           <svg id="leg" viewBox="0 0 260 170" aria-label="Animated leg gait with joint torques">
             <line x1="0" y1="160" x2="260" y2="160" stroke="#2e2e2e"/>
@@ -517,18 +524,18 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
             <circle id="jh" r="6" fill="#D4B25A"/><circle id="jk" r="5" fill="#D4B25A"/><circle id="ja" r="4" fill="#D4B25A"/>
           </svg>
           <div class="torque" aria-hidden="true">
-            <div>τ HIP<div class="bar"><i id="t0"></i></div></div>
-            <div>τ KNEE<div class="bar"><i id="t1"></i></div></div>
-            <div>τ ANKLE<div class="bar"><i id="t2"></i></div></div>
-            <div style="margin-top:6px;color:#D4B25A">PPO · STABLE GAIT IN SIM</div>
+            <div>HIP TORQUE<div class="bar"><i id="t0"></i></div></div>
+            <div>KNEE TORQUE<div class="bar"><i id="t1"></i></div></div>
+            <div>ANKLE TORQUE<div class="bar"><i id="t2"></i></div></div>
+            <div style="margin-top:6px;color:#D4B25A">STABLE WALKING IN SIM</div>
           </div>
         </div>
-        <div class="pipe"><span>IMU + encoders</span><i>→</i><span>PPO policy</span><i>→</i><span>Torque</span><i>→</i><span>ESP32 → motors</span></div>
+        <div class="pipe"><span>Motion sensor (IMU)</span><i>→</i><span>RL policy (PPO)</span><i>→</i><span>Motor torque</span><i>→</i><span>ESP32 → motors</span></div>
       </article>
     </div>
     <div class="honest rv">
       <span class="mono brass" style="padding-top:2px">Honest note</span>
-      <span><b>I'm still early with hardware and firmware</b>, and I'd rather say so than oversell it. What I can promise is speed: I pick things up fast, I'm comfortable owning a problem end to end, and I don't need a playbook.</span>
+      <span><b>I'm still early with hardware and firmware</b>, and I'd rather say so than oversell it. What I can promise is speed: I pick things up fast, I'm comfortable owning a problem end to end, and I don't need a playbook. Give me a hardware problem in the interview and watch me work through it.</span>
     </div>
   </div>
 </section>
@@ -540,9 +547,9 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
     <h2 class="rv">No spec.<br>Shipped anyway.</h2>
     <div class="fulcrum">
       <div>
-        <p class="lead rv">A retail CRM startup needed a whole product suite: a business-owner app, a neighbourhood app, and a multi-login web platform for admins and sales advisors. I designed the entire suite, then built the web side myself.</p>
+        <p class="lead rv">A retail CRM startup needed a whole product suite: a business-owner app, a neighbourhood app, and a web platform with separate logins for admins and sales advisors. I designed the entire suite, then built the web side myself.</p>
         <p class="quote rv">“There was no full spec, so I made the calls and shipped.”</p>
-        <div class="rv"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">Google OAuth</span></div>
+        <div class="rv"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">Google sign-in</span></div>
       </div>
       <div class="surfaces">
         <div class="surface rv"><div class="mock"><i></i><i></i><i></i><i></i></div><div><h5>Admin dashboard</h5><div class="roles"><span class="b">Designed</span><span class="b">Built</span></div></div></div>
@@ -555,11 +562,11 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
 </section>
 
 <!-- 05 RIPPLE -->
-<section id="s-ripple" data-rail="Backend" data-law="Tesler's Law|Complexity has to live somewhere. I put it in the system (retries, DLQs, idempotency) so users never see it.">
+<section id="s-ripple" data-rail="Backend" data-law="Tesler's Law|Complexity has to live somewhere. I put it in the system (retries, safe re-runs) so users never see it.">
   <div class="wrap">
     <div class="eyebrow mono rv"><span class="idx">04</span><span class="rule"></span>Ripple · my MVP · serverless AI platform</div>
     <h2 class="rv">Backends that<br>expect to fail.</h2>
-    <p class="lead rv" style="margin-top:24px">Ripple runs AI interview workflows: resume evaluation, transcript analysis and mock interviews. Below is roughly how it moves work. Every so often a job fails on purpose; watch it go to the dead-letter queue and come back without being processed twice.</p>
+    <p class="lead rv" style="margin-top:24px">Ripple is my MVP: an AI interview coach that reviews resumes, analyses interview transcripts and runs mock interviews. Below is how it moves work. Every fifth job fails on purpose. Watch it get caught, retried and finished, without ever being processed twice.</p>
     <div class="arch rv">
       <div class="arch-scroll"><svg id="archSvg" viewBox="0 66 1000 216" role="img" aria-label="Architecture: client to API Lambda to SQS queue to idempotent workers to LLM agents to Postgres with pgvector; failed jobs go to a dead-letter queue and are retried">
         <path class="wire" id="w1" d="M120 110 H190"/>
@@ -575,22 +582,23 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
         <g class="node"><rect x="570" y="80" width="120" height="60" rx="12"/><text x="630" y="108" text-anchor="middle">WORKERS</text><text class="s" x="630" y="126" text-anchor="middle">idempotent ×N</text></g>
         <g class="node"><rect x="760" y="80" width="120" height="60" rx="12"/><text x="820" y="108" text-anchor="middle">AGENTS</text><text class="s" x="820" y="126" text-anchor="middle">rubric scoring</text></g>
         <g class="node"><rect x="740" y="190" width="160" height="60" rx="12"/><text x="820" y="218" text-anchor="middle">POSTGRES</text><text class="s" x="820" y="236" text-anchor="middle">pgvector · RAG</text></g>
-        <g class="node"><rect x="380" y="210" width="120" height="60" rx="12" style="stroke:rgba(208,100,74,.6)"/><text x="440" y="238" text-anchor="middle">DLQ</text><text class="s" x="440" y="256" text-anchor="middle">retry · no dupes</text></g>
+        <g class="node"><rect x="380" y="210" width="120" height="60" rx="12" style="stroke:rgba(208,100,74,.6)"/><text x="440" y="238" text-anchor="middle">RETRY QUEUE</text><text class="s" x="440" y="256" text-anchor="middle">DLQ · no dupes</text></g>
         <g id="packets"></g>
       </svg></div>
       <div class="swipe mono">← swipe the diagram →</div>
       <div class="counter-row">
         <span class="mono">Jobs processed <b id="cOk">0</b></span>
-        <span class="mono">Recovered via DLQ <b id="cDlq">0</b></span>
+        <span class="mono">Failed, then recovered <b id="cDlq">0</b></span>
         <span class="mono">Duplicates <b>0</b></span>
       </div>
     </div>
     <div class="arch-notes">
-      <div class="rv"><h6>Fault tolerant</h6><p>Lambda + SQS with idempotent workers and DLQs, so it holds up under concurrent load.</p></div>
-      <div class="rv d1"><h6>Agentic scoring</h6><p>Specialised LLM agents score against configurable rubrics, and results are kept for analytics over time.</p></div>
-      <div class="rv d2"><h6>Private RAG</h6><p>pgvector semantic search over user uploads, with per-user isolation through JWT/OAuth.</p></div>
+      <div class="rv"><h6>Never drops work</h6><p>Failed jobs are caught and retried, and a retry never double-counts, even under heavy load.</p></div>
+      <div class="rv d1"><h6>AI that grades fairly</h6><p>Specialised AI agents score resumes and answers against rubrics you can edit, and track progress over time.</p></div>
+      <div class="rv d2"><h6>Answers from your own files</h6><p>AI search over each user's uploads, with every user's data kept strictly separate.</p></div>
     </div>
-    <div class="rv" style="margin-top:32px"><a class="btn btn-ghost" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener">Try the Ripple MVP live →</a></div>
+    <p class="stack rv"><b>Stack</b>AWS Lambda · API Gateway · SQS · DLQs · PostgreSQL + pgvector · RAG · LLM agents · React · Node</p>
+    <div class="rv" style="margin-top:28px"><a class="btn btn-ghost" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener">Try the Ripple MVP live →</a></div>
   </div>
 </section>
 
@@ -602,7 +610,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
     <div class="nums">
       <div class="num rv"><div class="big"><span data-count="3">0</span><span class="u">×</span></div><h5>KeyNcoders · Intern</h5><p>End-to-end redesign with wireframes, prototypes and a design system. Weekly visitors went from 1,000 to 3,000.</p></div>
       <div class="num rv d1"><div class="big">+<span data-count="25">0</span><span class="u">%</span></div><h5>GDG VIT · UI/UX Lead</h5><p>More registrations for DevsHouse, a national hackathon with 1,000+ participants from 50+ colleges.</p></div>
-      <div class="num rv d2"><div class="big"><span data-count="7">0</span></div><h5>Cavin Infotech · Intern</h5><p>Feature gaps found across 4 CRM platforms through competitor analysis. They shaped the product positioning.</p></div>
+      <div class="num rv d2"><div class="big"><span data-count="7">0</span></div><h5>Cavin Infotech · Intern</h5><p>Feature gaps I found by studying 4 competing CRM platforms. They shaped how the product was positioned.</p></div>
       <div class="num rv d3"><div class="big"><span data-count="100">0</span><span class="u">+</span></div><h5>Teaching</h5><p>People in a 6-hour Figma workshop I ran, plus 10+ junior designers I mentored.</p></div>
     </div>
   </div>
@@ -621,6 +629,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
           <div class="idea rv d1"><span class="no">B</span><div><h4>Signal confidence</h4><p>Show when a reading is noisy (motion, poor contact) so people trust the good ones. I did the same thing in Aletheia, turning model output into trust cues anyone can read.</p></div></div>
           <div class="idea rv d2"><span class="no">C</span><div><h4>Insight → Study</h4><p>Link each in-app insight to the matching study on your Science page. You already have the research, so let it carry the credibility.</p></div></div>
         </div>
+        <p class="hook rv">I have more where these came from. <a href="mailto:shreyashkhare.work@gmail.com?subject=Temple%20%E2%80%94%20let%27s%20talk">Ask me about them in an interview →</a></p>
       </div>
       <div class="rv d1">
         <div class="phone">
@@ -651,10 +660,11 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
     <h2 class="rv">My first 30 days.</h2>
     <div class="timeline" id="timeline">
       <div class="track"></div><div class="fill" id="tlFill"></div>
-      <div class="step"><div class="when" style="color:#6b5216">Days 1–7</div><h4 style="color:var(--ink)">Wear it</h4><p style="color:#3a3733">Use Temple every day like a customer. Write down every bit of friction in setup, wear and reading BrainFlow, and turn it into a ranked teardown.</p></div>
+      <div class="step"><div class="when" style="color:#6b5216">Days 1–7</div><h4 style="color:var(--ink)">Wear it</h4><p style="color:#3a3733">Use Temple every day like a customer. Note every bit of friction in setup, wear and reading BrainFlow, and turn it into a ranked list of fixes.</p></div>
       <div class="step"><div class="when" style="color:#6b5216">Days 8–14</div><h4 style="color:var(--ink)">Fix the small thing</h4><p style="color:#3a3733">Pick the smallest painful item from that list and ship a fix, whether it's a screen, an endpoint or an internal tool. Whatever the team needs most.</p></div>
-      <div class="step"><div class="when" style="color:#6b5216">Days 15–30</div><h4 style="color:var(--ink)">Own a surface</h4><p style="color:#3a3733">Own one surface end to end: design, build, instrument, measure. Then do it again, a bit faster.</p></div>
+      <div class="step"><div class="when" style="color:#6b5216">Days 15–30</div><h4 style="color:var(--ink)">Own a feature</h4><p style="color:#3a3733">Own one part of the product end to end: design it, build it, track it, and measure what changed. Then do it again, a bit faster.</p></div>
     </div>
+    <p class="hook rv">Day one starts with a conversation. <a href="tel:+919406511300">Call me: +91 94065 11300 →</a></p>
   </div>
 </section>
 
@@ -664,16 +674,16 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
     <div class="eyebrow mono rv"><span class="idx">08</span><span class="rule"></span>Also shipped</div>
     <h2 class="rv">More things,<br>live on the internet.</h2>
     <div class="work">
-      <a class="wcard rv" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener"><div><span class="mono"><span class="brass">MVP</span> · Serverless AI platform</span><h4>Ripple</h4><p>AI interview prep: resume evaluation, transcript analysis and mock interviews. LLM agents score against configurable rubrics, on AWS Lambda + SQS with idempotent workers, DLQs and a pgvector RAG pipeline. The architecture is shown above.</p></div><div class="go"><span>Live demo</span><b>→</b></div></a>
+      <a class="wcard rv" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener"><div><span class="mono"><span class="brass">MVP</span> · Serverless AI platform</span><h4>Ripple</h4><p>My MVP: an AI interview coach that reviews resumes, analyses transcripts and runs mock interviews. You saw how it works above. Try the live version.</p></div><div class="go"><span>Live demo</span><b>→</b></div></a>
       <a class="wcard rv d1" href="https://www.aethertech.space/" target="_blank" rel="noopener"><div><span class="mono">AI precision farming</span><h4>Aether</h4><p>Four ML pipelines (soil moisture, crop disease, crop recommendations, market prices) turned into one decision a farmer can act on in seconds. Frontend built end to end against a real backend.</p></div><div class="go"><span>aethertech.space</span><b>→</b></div></a>
-      <a class="wcard rv" href="https://github.com/shreyash-droid/webScrapingForJobs" target="_blank" rel="noopener"><div><span class="mono">Automated data pipeline</span><h4>CareerBot</h4><p>Scoped and shipped solo. A Python pipeline that scrapes 6 job boards, dedupes and ranks the listings, and sends the top 10 matches to Telegram. It runs 24/7 and replaced a manual tracker. Python, Telegram API, Google Sheets.</p></div><div class="go"><span>GitHub</span><b>→</b></div></a>
-      <a class="wcard rv d1" href="https://campuspreps.vercel.app/" target="_blank" rel="noopener"><div><span class="mono">Multi-university platform</span><h4>CampusPreps</h4><p>Sole designer and developer. 20+ white-label components any university can deploy, Next.js 15 + Prisma, with the whole stack running from one <code style="font-family:var(--mono);font-size:13px">docker compose up</code>.</p></div><div class="go"><span>Live site</span><b>→</b></div></a>
+      <a class="wcard rv" href="https://github.com/shreyash-droid/webScrapingForJobs" target="_blank" rel="noopener"><div><span class="mono">Automated data pipeline</span><h4>CareerBot</h4><p>Scoped and shipped solo. A Python bot that scans 6 job boards, removes duplicates, ranks the listings, and sends the top 10 matches to Telegram. It runs 24/7 and replaced a manual tracker. Python, Telegram API, Google Sheets.</p></div><div class="go"><span>GitHub</span><b>→</b></div></a>
+      <a class="wcard rv d1" href="https://campuspreps.vercel.app/" target="_blank" rel="noopener"><div><span class="mono">Multi-university platform</span><h4>CampusPreps</h4><p>Sole designer and developer. Notes and past papers in one place, built from 20+ reusable components so any university can launch its own version. Next.js 15, Prisma, and one Docker command to run it all.</p></div><div class="go"><span>Live site</span><b>→</b></div></a>
     </div>
     <div class="kit">
       <div class="rv"><h6>Design &amp; Product</h6><p>Figma · Design systems<br>Information architecture<br>Competitor analysis<br>Stakeholder management</p></div>
       <div class="rv d1"><h6>Frontend &amp; Tools</h6><p>React · Next.js<br>Tailwind CSS<br>Git / GitHub<br>Unit testing</p></div>
       <div class="rv d2"><h6>Backend &amp; Cloud</h6><p>AWS Lambda · API Gateway · SQS<br>REST · Microservices · Serverless<br>Distributed systems<br>PostgreSQL (pgvector) · RAG · LLM APIs</p></div>
-      <div class="rv d3"><h6>ML &amp; Hardware</h6><p>Machine learning · Image classification<br>Web scraping<br>Arduino · ESP32 · Isaac Sim · PPO<br>RF · 1D-CNN · SNN</p></div>
+      <div class="rv d3"><h6>ML &amp; Hardware</h6><p>Machine learning · Image classification<br>Web scraping<br>Arduino · ESP32 · Isaac Sim · PPO<br>Random Forest · CNN · Spiking NN</p></div>
     </div>
     <p class="langs rv"><span class="mono brass">Languages</span>Python · JavaScript · TypeScript · SQL · C · C++ · Java</p>
   </div>
@@ -684,9 +694,10 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   <div class="wrap">
     <svg class="mini rv" viewBox="0 0 220 154" aria-hidden="true"><path d="M44 18C88-2 162 2 194 30c22 20 20 66-2 92-16 19-44 22-70 15-20-5-36 10-64 10C24 147 4 120 4 82 4 50 18 30 44 18Z" fill="url(#bg1)"/><ellipse cx="86" cy="46" rx="70" ry="34" fill="url(#bg2)" clip-path="url(#beanClip)"/></svg>
     <h2 class="rv">You said<br><span class="brass">“figure it out.”</span></h2>
-    <p class="lead rv">I'd like to help build a device that reads blood flow in the brain. I'm happy to talk whenever suits you, or to take a small task first and let the work speak.</p>
+    <p class="lead rv">I'd like to help build a device that reads blood flow in the brain. Give me 20 minutes on a call, or a small task to try first, and let the work speak.</p>
     <div class="ctas rv">
       <a class="btn btn-brass" href="mailto:shreyashkhare.work@gmail.com?subject=Temple%20%E2%80%94%20let%27s%20talk">Email Shreyash →</a>
+      <a class="btn btn-ghost" href="tel:+919406511300">Call +91 94065 11300</a>
       <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
     </div>
     <div class="links rv">
@@ -750,7 +761,7 @@ if (!RM && matchMedia('(hover:hover)').matches) {
 }
 
 /* ---------- typing readout ---------- */
-const reads = [['Reading candidate', 'Design · 3+ yrs'], ['Signal', 'Build · 10+ shipped'], ['Signal', 'Backend · serverless'], ['Signal', 'Hardware · in progress'], ['Result', 'Worth a call']];
+const reads = [['Reading candidate', 'Design · 3+ yrs'], ['Signal', 'Build · 10+ shipped'], ['Signal', 'Backend · cloud + AI'], ['Signal', 'Hardware · in progress'], ['Result', 'Worth a call']];
 let ri = 0;
 const rk = $('#rk'), rv = $('#rv');
 async function typeLoop() {
