@@ -103,9 +103,9 @@ nav .btn{padding:10px 18px;font-size:14px}
 /* ---------- hero ---------- */
 .hero{min-height:100svh;display:flex;align-items:center;padding:104px 0 72px;overflow:hidden;background:radial-gradient(80% 70% at 72% 45%,#262524 0%,var(--bg) 62%)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;width:100%}
-.hero h1{font-size:clamp(50px,6vw,92px);margin:0 0 20px}
+.hero h1{font-size:clamp(44px,min(5.6vw,10.5vh),92px);margin:0 0 20px}
 .hero p.lead{font-size:clamp(17px,1.4vw,19px)}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.04em}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.04em;white-space:nowrap}
 .hero h1 .w > span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease)}
 .hero.ready h1 .w > span{transform:none}
 .hero h1 em{font-style:normal;background:linear-gradient(170deg,var(--brass-hi),var(--brass) 50%,var(--brass-lo));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -261,6 +261,10 @@ nav .btn{padding:10px 18px;font-size:14px}
 .step{position:relative;padding-top:44px}
 .step::before{content:"";position:absolute;top:2px;left:0;width:15px;height:15px;border-radius:50%;background:var(--bg);border:1px solid var(--line-2);transition:all .4s var(--ease)}
 .step.lit::before{background:var(--brass);border-color:var(--brass);box-shadow:0 0 16px var(--brass)}
+.stone .timeline .track{background:#9a968f}
+.stone .timeline .fill{background:linear-gradient(90deg,#2e2306,#5a4410);height:2px;margin-top:-.5px}
+.stone .step::before{background:var(--stone);border:2px solid #8e8a84}
+.stone .step.lit::before{background:#4a3809;border-color:#4a3809;box-shadow:0 0 0 5px rgba(74,56,9,.18)}
 .step .when{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--brass);text-transform:uppercase}
 .step h4{font-family:var(--display);font-size:34px;font-weight:700;text-transform:uppercase;line-height:1;margin:12px 0 10px}
 .step p{font-size:15px;color:#cfcac1}
@@ -276,6 +280,14 @@ nav .btn{padding:10px 18px;font-size:14px}
 .wcard .go{display:flex;justify-content:space-between;align-items:center;margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
 .wcard .go b{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;font-weight:400;color:var(--cream);transition:all .3s var(--ease)}
 .wcard:hover .go b{background:var(--brass);border-color:var(--brass);color:var(--ink);transform:rotate(-45deg)}
+.rows{margin-top:56px;border-top:1px solid var(--line)}
+.prow{display:grid;grid-template-columns:220px 1fr 44px;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease),background .3s}
+.prow .pn{font-family:var(--display);font-weight:700;font-size:34px;text-transform:uppercase;line-height:1}
+.prow .pd{font-size:16px;color:#cfcac1}
+.prow .pa{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:all .3s var(--ease)}
+.prow:hover{padding-left:14px;background:linear-gradient(90deg,rgba(212,178,90,.06),transparent)}
+.prow:hover .pn{color:var(--brass)}
+.prow:hover .pa{background:var(--brass);border-color:var(--brass);color:var(--ink);transform:rotate(-45deg)}
 .kit{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px}
 .kit h6{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);font-weight:400;margin-bottom:12px}
 .kit p{font-size:15px;color:#cfcac1;line-height:1.8}
@@ -300,16 +312,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
 
 /* ---------- UX X-ray ---------- */
-.xray-hint{display:flex;align-items:center;gap:12px;margin-top:20px;padding:10px 14px 10px 10px;border-radius:16px;border:1px dashed rgba(212,178,90,.6);background:linear-gradient(90deg,rgba(212,178,90,.1),rgba(212,178,90,.02));text-align:left;max-width:520px;opacity:0;transform:translateY(16px);transition:opacity .9s var(--ease) .9s,transform .9s var(--ease) .9s,background .25s,border-color .25s}
-.hero.ready .xray-hint{opacity:1;transform:none}
-.xray-hint:hover{border-style:solid;border-color:var(--brass);background:rgba(212,178,90,.14)}
-.xh-icon{flex:none;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--brass);color:var(--ink);position:relative;overflow:hidden}
-.xh-icon svg{width:20px;height:20px}
-.xh-icon::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff8dc;box-shadow:0 0 8px #fff8dc;animation:scanY 2.2s ease-in-out infinite}
-@keyframes scanY{0%,100%{top:8px}50%{top:30px}}
-.xh-txt{font-size:14px;line-height:1.45;color:#d9d4cb}
-.xh-txt b{color:var(--cream);font-weight:500}
-body.xray .xray-hint{border-style:solid;border-color:var(--brass)}
 
 [data-law]{position:relative}
 .law-tag{position:absolute;z-index:30;top:12px;left:12px;max-width:min(420px,calc(100% - 24px));font-family:var(--sans);font-size:14px;line-height:1.45;text-transform:none;font-weight:400;padding:12px 16px 13px;border-radius:12px;background:var(--brass);color:var(--ink);box-shadow:0 14px 40px rgba(0,0,0,.45),0 0 0 4px rgba(212,178,90,.18);opacity:0;transform:translateY(-8px) scale(.98);transform-origin:top left;pointer-events:none;transition:opacity .3s,transform .4s var(--ease);text-align:left}
@@ -339,6 +341,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   .arch svg{min-width:760px}
   .swipe{display:block}
   .hero{padding-top:90px}
+  .hero h1{font-size:min(15vw,84px)}
   .stats,.nums{grid-template-columns:1fr 1fr}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
@@ -346,10 +349,15 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   .num:nth-child(2){border-right:0}
   .num:nth-child(odd){padding-right:20px}.num:nth-child(even){padding-left:20px}
   .work{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr 40px;gap:8px 16px}
+  .prow .pn{grid-column:1}
+  .prow .pd{grid-column:1;grid-row:2}
+  .prow .pa{grid-column:2;grid-row:1/3}
   .kit,.arch-notes{grid-template-columns:1fr 1fr}
   .timeline{grid-template-columns:1fr;gap:0}
   .timeline .track,.timeline .fill{left:7px;right:auto;top:0;bottom:0;width:1px;height:100%}
   .timeline .fill{transform-origin:50% 0;transform:scaleY(0)}
+  .stone .timeline .fill{height:100%;width:2px;margin:0 0 0 -.5px}
   .step{padding:0 0 40px 44px}
   .step::before{top:4px}
 }
@@ -417,11 +425,6 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
         <a class="btn btn-brass" href="mailto:shreyashkhare.work@gmail.com?subject=Temple%20%E2%80%94%20let%27s%20talk">Email me →</a>
         <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
       </div>
-      <button class="xray-hint" id="xrayHint">
-        <span class="xh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3M3 12h18"/></svg></span>
-        <span class="xh-txt"><b>This page is annotated.</b> Turn on UX X-ray to see the <span id="lawN">11</span> UX laws behind its layout.</span>
-        <kbd>X</kbd>
-      </button>
     </div>
     <div class="stage" id="stage" aria-hidden="true">
       <div class="rings" id="rings"></div>
@@ -452,16 +455,6 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   </div>
   <canvas class="hero-wave" id="heroWave"></canvas>
 </section>
-
-<!-- proof strip: Miller's Law -->
-<div class="wrap" id="s-stats" data-law="Miller's Law|Four numbers, not fifteen. Working memory holds about 7±2 chunks, so the proof is pre-chunked.">
-  <div class="stats">
-    <div class="stat rv"><div class="n"><span data-count="3">0</span><sup>×</sup></div><p>weekly visitors after my KeyNcoders redesign (1k → 3k)</p></div>
-    <div class="stat rv d1"><div class="n"><span data-count="4">0</span><sup>products</sup></div><p>in one CRM suite. I designed all four and built the web side.</p></div>
-    <div class="stat rv d2"><div class="n"><span data-count="109">0</span><sup>k beats</sup></div><p>real heartbeats (MIT-BIH dataset) used to train my wearable-ECG models</p></div>
-    <div class="stat rv d3"><div class="n">+<span data-count="25">0</span><sup>%</sup></div><p>registrations for a 1,000+ person national hackathon</p></div>
-  </div>
-</div>
 
 <!-- 02 FOUR LANES -->
 <section class="stone" id="s-lanes" data-rail="Why me" data-law="Law of Prägnanz + Common Region|Four lanes collapse into one dot. The idea is simple enough to get before you read a word.">
@@ -494,16 +487,30 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   </div>
 </section>
 
-<!-- 03 CLOSEST TO TEMPLE -->
+<!-- 03 IMPACT -->
+<section id="s-numbers" data-rail="Impact" data-law="Von Restorff + Miller's Law|Four results, one big number each. Few enough to remember, and each one stands out on its own.">
+  <div class="wrap">
+    <div class="eyebrow mono rv"><span class="idx">02</span><span class="rule"></span>Impact</div>
+    <h2 class="rv">Design that<br>moved numbers.</h2>
+    <div class="nums">
+      <div class="num rv"><div class="big"><span data-count="3">0</span><span class="u">×</span></div><h5>KeyNcoders · Intern</h5><p>End-to-end redesign with wireframes, prototypes and a design system. Weekly visitors went from 1,000 to 3,000.</p></div>
+      <div class="num rv d1"><div class="big">+<span data-count="25">0</span><span class="u">%</span></div><h5>GDG VIT · UI/UX Lead</h5><p>More registrations for DevsHouse, a national hackathon with 1,000+ participants from 50+ colleges.</p></div>
+      <div class="num rv d2"><div class="big"><span data-count="7">0</span></div><h5>Cavin Infotech · Intern</h5><p>Feature gaps I found by studying 4 competing CRM platforms. They shaped how the product was positioned.</p></div>
+      <div class="num rv d3"><div class="big"><span data-count="100">0</span><span class="u">+</span></div><h5>Teaching</h5><p>People in a 6-hour Figma workshop I ran, plus 10+ junior designers I mentored.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 CLOSEST TO TEMPLE -->
 <section id="s-signal" data-rail="Your world" data-law="Law of Similarity|The work that looks most like Temple's problem (sensor → signal → model → body) sits right after the pitch.">
   <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">02</span><span class="rule"></span>Closest to your world</div>
-    <h2 class="rv">Sensor. Signal.<br><span class="brass">Model. Body.</span></h2>
-    <p class="lead rv" style="margin-top:24px">Temple reads blood flow from a sensor on the head. My two most relevant projects sit on the same chain, and both taught me the same thing: the hard part is getting from a clean signal or a clean simulation to something that works on a real body.</p>
+    <div class="eyebrow mono rv"><span class="idx">03</span><span class="rule"></span>Hardware + AI · closest to what Temple builds</div>
+    <h2 class="rv">I've built for<br><span class="brass">the human body.</span></h2>
+    <p class="lead rv" style="margin-top:24px">A heart-monitoring wearable and a robotic leg that learns to walk. Like Temple, both turn signals from a body into decisions, and both taught me the hard part: making it work on a real person, not just in a clean simulation.</p>
     <div class="split">
       <article class="card rv">
         <span class="tag">Academic group project</span><span class="tag">Wearable</span>
-        <h3>NeuroCardio — wearable ECG</h3>
+        <h3>NeuroCardio: a heart-monitoring wearable</h3>
         <p>An Arduino prototype with an analog ECG sensor and an electrode belt. I replaced the fake data we inherited with about 109k real heartbeats from the MIT-BIH Arrhythmia Database, then compared three kinds of model to see which spots irregular beats best.</p>
         <canvas class="scope" id="ecg" aria-label="Animated ECG trace"></canvas>
         <div class="scope-legend mono"><span>ECG trace · demo signal</span><span id="ecgBpm">— bpm</span></div>
@@ -511,7 +518,7 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
       </article>
       <article class="card rv d1">
         <span class="tag">Team project</span><span class="tag">Reinforcement learning</span>
-        <h3>Bipedal locomotion, sim → real</h3>
+        <h3>A robotic leg that learns to walk</h3>
         <p>We're teaching a robotic leg to walk with reinforcement learning. We designed the leg in CAD (6 joints, DC motors, an ESP32 controller and a motion sensor) and train it in NVIDIA Isaac Sim. The model reads joint angles and body tilt and decides how hard each motor pushes. We deliberately vary the simulation so what works in sim still works on real hardware.</p>
         <div class="leg-wrap">
           <svg id="leg" viewBox="0 0 260 170" aria-label="Animated leg gait with joint torques">
@@ -540,123 +547,10 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   </div>
 </section>
 
-<!-- 04 FULCRUM -->
-<section id="s-fulcrum" data-rail="Shipped" data-law="Law of Common Region|One product, four surfaces, grouped in one frame so the scope reads at a glance.">
-  <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">03</span><span class="rule"></span>Freelance · Fulcrum Retail Solutions · Jul–Sep 2026</div>
-    <h2 class="rv">No spec.<br>Shipped anyway.</h2>
-    <div class="fulcrum">
-      <div>
-        <p class="lead rv">A retail CRM startup needed a whole product suite: a business-owner app, a neighbourhood app, and a web platform with separate logins for admins and sales advisors. I designed the entire suite, then built the web side myself.</p>
-        <p class="quote rv">“There was no full spec, so I made the calls and shipped.”</p>
-        <div class="rv"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">Google sign-in</span></div>
-      </div>
-      <div class="surfaces">
-        <div class="surface rv"><div class="mock"><i></i><i></i><i></i><i></i></div><div><h5>Admin dashboard</h5><div class="roles"><span class="b">Designed</span><span class="b">Built</span></div></div></div>
-        <div class="surface rv d1"><div class="mock"><i></i><i></i><i></i><i></i></div><div><h5>Sales-advisor portal</h5><div class="roles"><span class="b">Designed</span><span class="b">Built</span></div></div></div>
-        <div class="surface rv d2"><div class="mock"><i></i><i></i><i></i><i></i></div><div><h5>Business-owner app</h5><div class="roles"><span class="b">Designed</span><span>Co-developed</span></div></div></div>
-        <div class="surface rv d3"><div class="mock"><i></i><i></i><i></i><i></i></div><div><h5>Neighbourhood app</h5><div class="roles"><span class="b">Designed</span><span>Co-developed</span></div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 RIPPLE -->
-<section id="s-ripple" data-rail="Backend" data-law="Tesler's Law|Complexity has to live somewhere. I put it in the system (retries, safe re-runs) so users never see it.">
-  <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">04</span><span class="rule"></span>Ripple · my MVP · serverless AI platform</div>
-    <h2 class="rv">Backends that<br>expect to fail.</h2>
-    <p class="lead rv" style="margin-top:24px">Ripple is my MVP: an AI interview coach that reviews resumes, analyses interview transcripts and runs mock interviews. Below is how it moves work. Every fifth job fails on purpose. Watch it get caught, retried and finished, without ever being processed twice.</p>
-    <div class="arch rv">
-      <div class="arch-scroll"><svg id="archSvg" viewBox="0 66 1000 216" role="img" aria-label="Architecture: client to API Lambda to SQS queue to idempotent workers to LLM agents to Postgres with pgvector; failed jobs go to a dead-letter queue and are retried">
-        <path class="wire" id="w1" d="M120 110 H190"/>
-        <path class="wire" id="w2" d="M310 110 H380"/>
-        <path class="wire" id="w3" d="M500 110 H570"/>
-        <path class="wire" id="w4" d="M690 110 H760"/>
-        <path class="wire" id="w5" d="M820 140 V190"/>
-        <path class="wire dlq" id="wf" d="M630 140 V240 H500"/>
-        <path class="wire dlq" id="wr" d="M380 240 H340 Q320 240 330 200 L420 140"/>
-        <g class="node"><rect x="10" y="80" width="110" height="60" rx="12"/><text x="65" y="108" text-anchor="middle">CLIENT</text><text class="s" x="65" y="126" text-anchor="middle">React · JWT</text></g>
-        <g class="node"><rect x="190" y="80" width="120" height="60" rx="12"/><text x="250" y="108" text-anchor="middle">API</text><text class="s" x="250" y="126" text-anchor="middle">Gateway · Lambda</text></g>
-        <g class="node"><rect x="380" y="80" width="120" height="60" rx="12"/><text x="440" y="108" text-anchor="middle">QUEUE</text><text class="s" x="440" y="126" text-anchor="middle">SQS</text></g>
-        <g class="node"><rect x="570" y="80" width="120" height="60" rx="12"/><text x="630" y="108" text-anchor="middle">WORKERS</text><text class="s" x="630" y="126" text-anchor="middle">idempotent ×N</text></g>
-        <g class="node"><rect x="760" y="80" width="120" height="60" rx="12"/><text x="820" y="108" text-anchor="middle">AGENTS</text><text class="s" x="820" y="126" text-anchor="middle">rubric scoring</text></g>
-        <g class="node"><rect x="740" y="190" width="160" height="60" rx="12"/><text x="820" y="218" text-anchor="middle">POSTGRES</text><text class="s" x="820" y="236" text-anchor="middle">pgvector · RAG</text></g>
-        <g class="node"><rect x="380" y="210" width="120" height="60" rx="12" style="stroke:rgba(208,100,74,.6)"/><text x="440" y="238" text-anchor="middle">RETRY QUEUE</text><text class="s" x="440" y="256" text-anchor="middle">DLQ · no dupes</text></g>
-        <g id="packets"></g>
-      </svg></div>
-      <div class="swipe mono">← swipe the diagram →</div>
-      <div class="counter-row">
-        <span class="mono">Jobs processed <b id="cOk">0</b></span>
-        <span class="mono">Failed, then recovered <b id="cDlq">0</b></span>
-        <span class="mono">Duplicates <b>0</b></span>
-      </div>
-    </div>
-    <div class="arch-notes">
-      <div class="rv"><h6>Never drops work</h6><p>Failed jobs are caught and retried, and a retry never double-counts, even under heavy load.</p></div>
-      <div class="rv d1"><h6>AI that grades fairly</h6><p>Specialised AI agents score resumes and answers against rubrics you can edit, and track progress over time.</p></div>
-      <div class="rv d2"><h6>Answers from your own files</h6><p>AI search over each user's uploads, with every user's data kept strictly separate.</p></div>
-    </div>
-    <p class="stack rv"><b>Stack</b>AWS Lambda · API Gateway · SQS · DLQs · PostgreSQL + pgvector · RAG · LLM agents · React · Node</p>
-    <div class="rv" style="margin-top:28px"><a class="btn btn-ghost" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener">Try the Ripple MVP live →</a></div>
-  </div>
-</section>
-
-<!-- 06 DESIGN NUMBERS -->
-<section id="s-numbers" data-rail="Impact" data-law="Von Restorff Effect|Each result gets one big number in its own cell. The item that stands out is the one people remember.">
-  <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">05</span><span class="rule"></span>Design results</div>
-    <h2 class="rv">Design that<br>moved numbers.</h2>
-    <div class="nums">
-      <div class="num rv"><div class="big"><span data-count="3">0</span><span class="u">×</span></div><h5>KeyNcoders · Intern</h5><p>End-to-end redesign with wireframes, prototypes and a design system. Weekly visitors went from 1,000 to 3,000.</p></div>
-      <div class="num rv d1"><div class="big">+<span data-count="25">0</span><span class="u">%</span></div><h5>GDG VIT · UI/UX Lead</h5><p>More registrations for DevsHouse, a national hackathon with 1,000+ participants from 50+ colleges.</p></div>
-      <div class="num rv d2"><div class="big"><span data-count="7">0</span></div><h5>Cavin Infotech · Intern</h5><p>Feature gaps I found by studying 4 competing CRM platforms. They shaped how the product was positioned.</p></div>
-      <div class="num rv d3"><div class="big"><span data-count="100">0</span><span class="u">+</span></div><h5>Teaching</h5><p>People in a 6-hour Figma workshop I ran, plus 10+ junior designers I mentored.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 07 CONCEPT FOR TEMPLE -->
-<section id="s-concept" data-rail="For Temple" data-law="Peak-End Rule + Doherty Threshold|The interactive peak of the page. Every tap responds in well under 400 ms, so it feels instant.">
-  <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">06</span><span class="rule"></span>Something I'd want to build with you</div>
-    <h2 class="rv">“Is it working?”<br><span class="brass">Show me.</span></h2>
-    <div class="concept">
-      <div>
-        <p class="lead rv">Temple's promise is that you can see whether your practices are working. Here's a small concept for that moment. Tap a practice and compare BrainFlow on days you did it against days you didn't.</p>
-        <div class="ideas">
-          <div class="idea rv"><span class="no">A</span><div><h4>Practice Lens</h4><p>Tag a habit and see its effect, not just a raw graph. The comparison is the insight.</p><div class="from">Try it on the phone →</div></div></div>
-          <div class="idea rv d1"><span class="no">B</span><div><h4>Signal confidence</h4><p>Show when a reading is noisy (motion, poor contact) so people trust the good ones. I did the same thing in Aletheia, turning model output into trust cues anyone can read.</p></div></div>
-          <div class="idea rv d2"><span class="no">C</span><div><h4>Insight → Study</h4><p>Link each in-app insight to the matching study on your Science page. You already have the research, so let it carry the credibility.</p></div></div>
-        </div>
-        <p class="hook rv">I have more where these came from. <a href="mailto:shreyashkhare.work@gmail.com?subject=Temple%20%E2%80%94%20let%27s%20talk">Ask me about them in an interview →</a></p>
-      </div>
-      <div class="rv d1">
-        <div class="phone">
-          <div class="screen">
-            <div class="notch"></div>
-            <div class="t1">Practice Lens · 14 days</div>
-            <div class="t2" id="plTitle">Cold exposure</div>
-            <div class="delta"><span class="dv" id="plDelta">+0%</span><span class="dl">BrainFlow on practice days vs. rest days</span></div>
-            <div class="chart"><svg id="plChart" viewBox="0 0 300 160" preserveAspectRatio="none"></svg></div>
-            <div class="chips" role="group" aria-label="Choose a practice">
-              <button aria-pressed="true" data-p="cold">Cold</button>
-              <button aria-pressed="false" data-p="sleep">Sleep</button>
-              <button aria-pressed="false" data-p="med">Meditation</button>
-              <button aria-pressed="false" data-p="ex">Exercise</button>
-            </div>
-            <div class="disclaim">Concept · illustrative data · not real Temple readings</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- 08 FIRST 30 DAYS -->
 <section id="s-plan" class="stone" data-rail="Day one" data-law="Goal-Gradient Effect|The line fills as you scroll. Visible progress makes people more likely to finish.">
   <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">07</span><span class="rule"></span>If you hire me</div>
+    <div class="eyebrow mono rv"><span class="idx">04</span><span class="rule"></span>If you hire me</div>
     <h2 class="rv">My first 30 days.</h2>
     <div class="timeline" id="timeline">
       <div class="track"></div><div class="fill" id="tlFill"></div>
@@ -668,24 +562,17 @@ section[data-law]>.law-tag{top:84px;left:var(--gutter)}
   </div>
 </section>
 
-<!-- 09 MORE WORK + TOOLKIT -->
-<section id="s-work" data-rail="More work" data-law="Progressive Disclosure|A short summary here, with the details one click away. Busy readers can skim and curious ones can dig in.">
+<!-- 09 MORE WORK -->
+<section id="s-work" data-rail="More work" data-law="Progressive Disclosure|One line per project, with the details one click away. Skim in seconds, dig in if curious.">
   <div class="wrap">
-    <div class="eyebrow mono rv"><span class="idx">08</span><span class="rule"></span>Also shipped</div>
+    <div class="eyebrow mono rv"><span class="idx">05</span><span class="rule"></span>Also shipped</div>
     <h2 class="rv">More things,<br>live on the internet.</h2>
-    <div class="work">
-      <a class="wcard rv" href="https://ripple-ochre-five.vercel.app/" target="_blank" rel="noopener"><div><span class="mono"><span class="brass">MVP</span> · Serverless AI platform</span><h4>Ripple</h4><p>My MVP: an AI interview coach that reviews resumes, analyses transcripts and runs mock interviews. You saw how it works above. Try the live version.</p></div><div class="go"><span>Live demo</span><b>→</b></div></a>
-      <a class="wcard rv d1" href="https://www.aethertech.space/" target="_blank" rel="noopener"><div><span class="mono">AI precision farming</span><h4>Aether</h4><p>Four ML pipelines (soil moisture, crop disease, crop recommendations, market prices) turned into one decision a farmer can act on in seconds. Frontend built end to end against a real backend.</p></div><div class="go"><span>aethertech.space</span><b>→</b></div></a>
-      <a class="wcard rv" href="https://github.com/shreyash-droid/webScrapingForJobs" target="_blank" rel="noopener"><div><span class="mono">Automated data pipeline</span><h4>CareerBot</h4><p>Scoped and shipped solo. A Python bot that scans 6 job boards, removes duplicates, ranks the listings, and sends the top 10 matches to Telegram. It runs 24/7 and replaced a manual tracker. Python, Telegram API, Google Sheets.</p></div><div class="go"><span>GitHub</span><b>→</b></div></a>
-      <a class="wcard rv d1" href="https://campuspreps.vercel.app/" target="_blank" rel="noopener"><div><span class="mono">Multi-university platform</span><h4>CampusPreps</h4><p>Sole designer and developer. Notes and past papers in one place, built from 20+ reusable components so any university can launch its own version. Next.js 15, Prisma, and one Docker command to run it all.</p></div><div class="go"><span>Live site</span><b>→</b></div></a>
+    <div class="rows">
+      <a class="prow rv" href="https://www.aethertech.space/" target="_blank" rel="noopener"><span class="pn">Aether</span><span class="pd">AI farming platform. Four ML models turned into one decision a farmer can act on.</span><span class="pa">→</span></a>
+      <a class="prow rv d1" href="https://github.com/shreyash-droid/webScrapingForJobs" target="_blank" rel="noopener"><span class="pn">CareerBot</span><span class="pd">Python bot that scans 6 job boards and sends the top 10 matches to Telegram, 24/7.</span><span class="pa">→</span></a>
+      <a class="prow rv d2" href="https://campuspreps.vercel.app/" target="_blank" rel="noopener"><span class="pn">CampusPreps</span><span class="pd">Notes and past papers in one hub that any university can launch. Solo design and build.</span><span class="pa">→</span></a>
     </div>
-    <div class="kit">
-      <div class="rv"><h6>Design &amp; Product</h6><p>Figma · Design systems<br>Information architecture<br>Competitor analysis<br>Stakeholder management</p></div>
-      <div class="rv d1"><h6>Frontend &amp; Tools</h6><p>React · Next.js<br>Tailwind CSS<br>Git / GitHub<br>Unit testing</p></div>
-      <div class="rv d2"><h6>Backend &amp; Cloud</h6><p>AWS Lambda · API Gateway · SQS<br>REST · Microservices · Serverless<br>Distributed systems<br>PostgreSQL (pgvector) · RAG · LLM APIs</p></div>
-      <div class="rv d3"><h6>ML &amp; Hardware</h6><p>Machine learning · Image classification<br>Web scraping<br>Arduino · ESP32 · Isaac Sim · PPO<br>Random Forest · CNN · Spiking NN</p></div>
-    </div>
-    <p class="langs rv"><span class="mono brass">Languages</span>Python · JavaScript · TypeScript · SQL · C · C++ · Java</p>
+    <p class="langs rv"><span class="mono brass">Toolkit</span>Figma · React · Next.js · TypeScript · Python · AWS · PostgreSQL · LLM APIs · Arduino · ESP32</p>
   </div>
 </section>
 
@@ -846,66 +733,6 @@ let bpm = 74; setInterval(() => { bpm = 72 + Math.round(Math.random() * 5); $('#
   requestAnimationFrame(frame);
 })();
 
-/* ---------- Ripple packets ---------- */
-(() => {
-  const svg = $('#archSvg'), layer = $('#packets'), NS = 'http://www.w3.org/2000/svg';
-  const P = id => $('#' + id);
-  const ok = ['w1', 'w2', 'w3', 'w4', 'w5'], fail = ['w1', 'w2', 'w3', 'wf', 'wr', 'w3', 'w4', 'w5'];
-  let nOk = 0, nD = 0, n = 0, vis = false;
-  new IntersectionObserver(([e]) => vis = e.isIntersecting).observe(svg);
-  function run(route, isFail) {
-    const c = document.createElementNS(NS, 'circle'); c.setAttribute('r', 6); c.setAttribute('fill', '#D4B25A'); c.style.filter = 'drop-shadow(0 0 6px rgba(212,178,90,.8))'; layer.appendChild(c);
-    let seg = 0, st = null;
-    const step = now => {
-      if (st === null) st = now;
-      const path = P(route[seg]), len = path.getTotalLength(), dur = Math.max(260, len * 4.2), k = Math.min(1, (now - st) / dur);
-      const pt = path.getPointAtLength(len * k); c.setAttribute('cx', pt.x); c.setAttribute('cy', pt.y);
-      if (route[seg] === 'wf') c.setAttribute('fill', '#d0644a');
-      if (route[seg] === 'wr' && k > .5) c.setAttribute('fill', '#D4B25A');
-      if (k >= 1) { seg++; st = now; if (seg >= route.length) { c.remove(); if (isFail) { nD++; $('#cDlq').textContent = nD; } nOk++; $('#cOk').textContent = nOk; return; } }
-      requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }
-  if (!RM) setInterval(() => { if (!vis || document.hidden) return; n++; const f = n % 5 === 0; run(f ? fail : ok, f); }, 700);
-})();
-
-/* ---------- Practice Lens ---------- */
-(() => {
-  const data = {
-    cold: { name: 'Cold exposure', on: [2, 3, 6, 9, 10, 13], lift: 9 },
-    sleep: { name: 'Sleep 8h+', on: [0, 1, 4, 5, 8, 11, 12], lift: 12 },
-    med: { name: 'Meditation', on: [1, 3, 5, 7, 9, 11, 13], lift: 6 },
-    ex: { name: 'Exercise', on: [0, 2, 4, 7, 8, 10, 12], lift: 14 }
-  };
-  const svg = $('#plChart'), NS = 'http://www.w3.org/2000/svg';
-  const seed = i => (Math.sin(i * 12.9898) * 43758.5453) % 1;
-  let cur = null, raf;
-  function series(p) { return Array.from({ length: 14 }, (_, i) => 62 + Math.abs(seed(i + 1)) * 8 + (p.on.includes(i) ? p.lift : 0)); }
-  function render(key) {
-    const p = data[key], s = series(p), max = 90, min = 50;
-    const X = i => 12 + i * (276 / 13), Y = v => 150 - (v - min) / (max - min) * 130;
-    const from = cur || s;
-    cancelAnimationFrame(raf); const t0 = performance.now();
-    const onAvg = s.filter((_, i) => p.on.includes(i)).reduce((a, b) => a + b, 0) / p.on.length;
-    const offAvg = s.filter((_, i) => !p.on.includes(i)).reduce((a, b) => a + b, 0) / (14 - p.on.length);
-    $('#plTitle').textContent = p.name; $('#plDelta').textContent = '+' + Math.round((onAvg / offAvg - 1) * 100) + '%';
-    const tick = now => {
-      const k = RM ? 1 : Math.min(1, (now - t0) / 380), e = 1 - (1 - k) ** 3;
-      const v = s.map((y, i) => from[i] + (y - from[i]) * e);
-      let html = '';
-      for (let y = 60; y <= 90; y += 10) html += `<line x1="0" x2="300" y1="${Y(y)}" y2="${Y(y)}" stroke="#262524"/>`;
-      v.forEach((y, i) => { const on = p.on.includes(i); html += `<rect x="${X(i) - 7}" y="${Y(y)}" width="14" height="${150 - Y(y)}" rx="3" fill="${on ? 'url(#plg)' : '#2a2927'}"/>`; });
-      html = `<defs><linearGradient id="plg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1DE9C"/><stop offset="1" stop-color="#8A6B23"/></linearGradient></defs>` + html;
-      svg.innerHTML = html;
-      if (k < 1) raf = requestAnimationFrame(tick); else cur = s;
-    };
-    raf = requestAnimationFrame(tick);
-  }
-  $$('.chips button').forEach(b => b.addEventListener('click', () => { $$('.chips button').forEach(x => x.setAttribute('aria-pressed', x === b)); render(b.dataset.p); }));
-  render('cold');
-})();
-
 /* ---------- reveals + counters ---------- */
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -40px 0px' });
 $$('.rv').forEach(el => io.observe(el));
@@ -946,7 +773,6 @@ addEventListener('scroll', onScroll, { passive: true }); addEventListener('resiz
 /* ---------- UX X-ray ---------- */
 const lawEls = $$('[data-law]'), LN = String(lawEls.length).padStart(2, '0');
 lawEls.forEach((el, i) => { const [name, why] = el.dataset.law.split('|'); const t = document.createElement('div'); t.className = 'law-tag'; t.innerHTML = `<span class="ln">Law ${String(i + 1).padStart(2, '0')} / ${LN}</span><b>${name}</b>${why}`; el.prepend(t); });
-$('#lawN').textContent = lawEls.length;
 const xb = $('#xrayBtn'), scan = $('#scan');
 function updateHud() {
   if (!document.body.classList.contains('xray')) return;
@@ -964,7 +790,6 @@ const toggleX = () => {
 };
 addEventListener('scroll', updateHud, { passive: true });
 xb.addEventListener('click', toggleX);
-$('#xrayHint').addEventListener('click', toggleX);
 $('#hudOff').addEventListener('click', toggleX);
 $$('.lawN2').forEach(el => el.textContent = lawEls.length);
 
